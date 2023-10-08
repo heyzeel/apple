@@ -1,0 +1,186 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Tilt Neon', cursive;
+    color: white;
+}
+body{
+    width: 100%;
+    height: 50rem;
+    background-color: black;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -3;
+}
+.container{
+    width: 100%;
+    /* display: relative; */
+    box-sizing: border-box;
+    padding: 0% 0%;
+    /* overflow: hidden; */
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 3px;
+    z-index: 3;
+}
+.navbar::before{
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 56.67px;
+    z-index: -2;
+    /* border-bottom-left-radius:5px ;
+    border-bottom-right-radius:5px ; */
+    border-radius: 5px;
+}
+#logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+nav{
+    flex:1;
+    text-align: center;
+    position: relative;
+    left: -45px;
+}
+
+.menu{
+    display: inline-block;
+    cursor: pointer;
+    list-style: none;
+    margin: 12px 0px;
+    position: relative;
+    padding: 6px 10px;
+}
+.menu::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    height: 100%;
+    border-bottom: 2px solid black;
+    width: 0%;
+    z-index: -1;
+    transition: all 100ms;
+}
+.menu:hover::before,
+.menu:focus::before{
+    width: 100%;
+    right: 0%;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+
+ section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+ }
+ .name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+ }
+ #iphone{
+    width: 22%;
+    position: relative;
+    top: 0;
+    height: auto;
+    margin:auto;
+    cursor: pointer;
+    transition: all 1s;
+ }
+#iphone:hover{
+    /* left: 10px; */
+    padding: 0% 5% 0% 0%; 
+    /* width: 25%;  */
+ } 
+
+
+ .name h1{
+    font-size: 5rem;
+    cursor: pointer;
+ }
+ #buy{
+    position: relative;
+    margin: 10%;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 0px 30px;
+    border-radius: 30px;
+ }
+
+ #buy::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color: rgb(231, 70, 70);
+    width: 0%;
+    height: 100%;
+    border-radius: 0px;
+    z-index: -1;
+    transition: all 100ms;
+ }
+ #buy:hover::before,
+ #buy:focus::before{
+    width: 100%;
+    left: 0;
+    border-radius: 30px;
+ }
+ .about{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    z-index: 1;
+    margin: 5%;
+    padding-bottom: 20px;
+ }
+ #ipname{
+    margin: 0px 0px 25px 0px;
+    transition: all 100ms;
+ }
+ #ipname:hover{
+    color: #7fb57f;
+ }
+ .about div{
+    text-align: center;
+ }
+ .about::before{
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: 15%;
+    bottom: 0;
+    border-top: 2px solid white;
+    width: 70%;
+    height: 100%;
+}
